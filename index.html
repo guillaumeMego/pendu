@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Le Pendu !</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="cursor"></div>
+      <!-- Div contenant le curseur -->
+      <div class="gauche">
+        <!-- Partie gauche -->
+        <div class="panneau">
+          <!-- Panneau pour commencer -->
+          <button class="commencer">Commencer une partie</button>
+        </div>
+        <img
+          src="./assets/image/kisspng-chalkboard-eraser-blackboard-hand-painted-blackboard-eraser-5a7b0ba6292e40.7552005315180133501687.png"
+          height="150"
+          width="150"
+          class="brosse"
+          alt="brosse"
+        /><!-- Image brosse -->
+      </div>
+      <!-- Centre du site contient le jeu du pendu -->
+      <div class="millieu">
+        <h1>Le pendu</h1>
+        <img
+          src="./assets/image/regle-plate-à-tableau.png"
+          class="regle"
+          alt="règle"
+        /><!-- Image de la règle -->
+        <div class="visuel">
+          <div class="left">
+            <svg height="250" width="200" class="figure-contenant">
+              <!------------------ Support ------------------>
+              <!-- barre supperieur -->
+              <line x1="60" y1="20" x2="140" y2="20" />
+              <!-- barre horizontale -->
+              <line x1="60" y1="20" x2="60" y2="220" />
+              <!-- base du pendu -->
+              <line x1="20" y1="220" x2="100" y2="220" />
+              <!-- poutre maintien -->
+              <line x1="60" y1="60" x2="100" y2="20" />
+              <!-- corde -->
+              <line x1="140" y1="20" x2="140" y2="60" />
+              <!------------------ Personnage ------------------>
+              <!-- tete du pendu -->
+              <circle cx="140" cy="80" r="20" class="figure-partie" />
+              <!-- corps -->
+              <line x1="140" y1="100" x2="140" y2="140" class="figure-partie" />
+              <!-- bras droit -->
+              <line x1="140" y1="100" x2="160" y2="120" class="figure-partie" />
+              <!-- bras gauche -->
+              <line x1="140" y1="100" x2="120" y2="120" class="figure-partie" />
+              <!-- jambe gauche -->
+              <line x1="140" y1="140" x2="120" y2="160" class="figure-partie" />
+              <!-- jambe droite -->
+              <line x1="140" y1="140" x2="160" y2="160" class="figure-partie" />
+            </svg>
+          </div>
+          <div class="right">
+            <div class="mauvais">
+              <h4>Lettres et Mots Essayés :</h4>
+              <div class="mauvaise"></div>
+            </div>
+          </div>
+        </div>
+        <div class="jeu">
+          <div class="center">
+            <div class="bonne"></div>
+            <form name="form" action="" method="GET">
+              <label for="mot">Entrez une lettre ou un mot complet :</label
+              ><br />
+              <input
+                name="mot"
+                type="text"
+                id="mot"
+                value="ici"
+                onFocus="if(this.value=='ici')this.value=''"
+                onBlur="if(this.value=='')this.value='ici'"
+              />
+              <input type="submit" class="valider" value="let's go" />
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="droite">
+        <img
+          src="./assets/image/joint-dolls-g48056fc78_1920.png"
+          class="figurine"
+          alt="figurine_pendu"
+        />
+        <!-- Div cachées -->
+
+        <div class="resultat">
+          <div class="final gagne">
+            Bravo, tu as trouvé le mot !
+            <span class="mottrouve"></span>
+            <button class="re_commencer">Recommencer</button>
+          </div>
+          <div class="final perdu">
+            Oups, tu as perdu !
+            <span class="motperdu"></span>
+            <button class="recommencer">Recommencer</button>
+          </div>
+        </div>
+        <div class="afficher">Lettre ou mot deja essayé</div>
+      </div>
+    </div>
+
+    <script src="./index.js"></script>
+  </body>
+</html>

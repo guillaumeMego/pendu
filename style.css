@@ -1,0 +1,291 @@
+/* Fonts family importées */
+@font-face {
+    font-family: belania;
+    src: url(./assets/font/bellania.ttf);
+} 
+@font-face {
+    font-family: tableau;
+    src: url(./assets/font/Reach\ Story.ttf);
+}
+/* Remettre tout a zero (paddin, marging etc..) */
+*{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    box-sizing: border-box;
+}
+body{
+    background-image: url(./assets/image/blackboard-2167844_960_720.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: none;
+}
+.cursor{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    background: url(./assets/image/kisspng-chalk-hand-finger-stock-photography-holding-5ac6f4225823e4.760847971522988066361.png);
+    background-position: center;
+    background-size: cover;
+}
+.container{
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    color: #f0ebe1;
+    font-family: belania, serif;
+    height: 100vh;
+    margin-bottom: 50px;
+    height: 100vh;
+    width: 100vw;
+}
+.panneau{
+    height: 200px;
+    width: 250px;
+    background: url(./assets/image/kisspng-wood-clip-art-wooden-signboard-5b0c88d0c8e722.2772929415275481128229.png);
+    background-size: cover;
+    background-position: center;
+    animation: figurine 4s infinite;
+    cursor: auto;
+}
+.commencer{
+    position: absolute;
+    top: 140px;
+    left: 7px;
+    font-size: 40px;
+    text-align: center;
+    color: #393E46;
+    font-weight: bold;
+    border: none;
+    font-family: tableau, Helvetica, sans-serif;
+    padding: 0;
+}
+.brosse{
+    position: relative;
+    top: 270px;
+    z-index: -999;
+}
+h1{
+    font-size: 3.5em;
+    letter-spacing: 5px;    
+}
+.regle{
+    position: relative;
+    width: 600px;
+    top: -315px;
+    z-index: -999;
+}
+.visuel{
+    position: relative;
+    top: -580px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: -999;
+}
+.left{
+    margin-right: 41px;
+}
+.jeu{
+    position: relative;
+    top: -570px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.right{
+    border: 5px dashed #f0ebe1;
+}
+
+.bonne{
+   
+    height: 150px;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    z-index: -999;
+}
+.bonneLettre{
+    border-bottom: 3px solid #f0ebe1;
+    display: inline-flex;
+    font-size: 30px;
+    align-items: center;
+    justify-content: center;
+    margin: 0 6px;
+    height: 50px;
+    width: 20px;
+    z-index: -999;
+}
+.mauvais{
+    height: 300px;
+    width: 250px;
+}
+.mauvaise {
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.mauvaise span{
+    margin: 5px 10px;
+}
+
+input[type="submit"]{
+    border: 1px solid #f0ebe1;
+    padding: 0 20px;
+    margin-top: 15px;
+    background: transparent;
+    color: #f0ebe1;
+    font-size: 12px;
+    font-family: belania;
+}
+input[type=text]:active, input[type=text]:focus {
+    outline: none;
+    border: none;
+    text-align: center;
+}
+input{
+    border: 1px solid #f0ebe1;
+    padding: 0 20px;
+    margin-top: 15px;
+    background: transparent;
+    color: #f0ebe1;
+    font-size: 16px;
+    font-family: belania;
+    transition: 0.8s; 
+    text-align: center; 
+    cursor: none;
+}
+input[type="submit"]{
+    cursor: none;
+    
+}
+input[type="submit"]:hover{
+    background: #f0ebe1;
+    color: #393E46;
+    transition: 0.8s;
+    
+}
+.final{
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 340px;
+    width: 450px;
+    background: #f0ebe1;
+    color: #393E46;
+    box-shadow: 11px 11px 8px 4px rgba(0,0,0,0.66);
+    -webkit-box-shadow: 11px 11px 8px 4px rgba(0,0,0,0.66);
+    -moz-box-shadow: 11px 11px 8px 4px rgba(0,0,0,0.66);
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    display: none;
+    transition: 3s;
+    cursor: auto;
+}
+.final button{
+    background: #393E46;
+}
+.final button:hover{
+    background: #f0ebe1;
+}
+
+button{
+    border: 1px solid #f0ebe1;
+    padding: 0 20px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    background: transparent;
+    color: #f0ebe1;
+    font-size: 26px;
+    font-family: belania;
+    transition: 0.8s;
+}
+.resultat button:hover{
+    background: #f0ebe1;
+    color: #393E46;
+    transition: 0.8s;
+}
+.afficher{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 150px;
+    width: 250px;
+    background: #f0ebe1;
+    color: #393E46;
+    box-shadow: 11px 11px 8px 4px rgba(0,0,0,0.66);
+    -webkit-box-shadow: 11px 11px 8px 4px rgba(0,0,0,0.66);
+    -moz-box-shadow: 11px 11px 8px 4px rgba(0,0,0,0.66);
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    display: none;
+    cursor: auto;
+}
+.figure-contenant{
+    stroke: #f0ebe1;
+    stroke-width: 9px;
+    stroke-linecap: round;
+    fill:transparent
+}
+.figure-partie{
+    display: none;
+}
+.figurine{
+    height: 600px;
+    animation: figurine 5s infinite ;
+}
+@keyframes figurine{
+    0%, 100%{
+        transform: rotate(3deg);
+        transform-origin: top;
+    }
+    50%{
+        transform: rotate(-3deg);
+        transform-origin: top;
+    }
+}
+@media (max-width: 1260px) { 
+    .figurine{
+        display: none;
+    }
+}
+@media (max-width: 880px) { 
+    .figurine{
+        display: none;
+    }
+    .brosse{
+        display: none;
+    }
+    .panneau{
+        position: absolute;
+        top: -70px;
+        right: -7%;
+        transform: rotate(35deg);
+        height: 200px;
+        width: 250px;
+        background: url(./assets/image/kisspng-wood-clip-art-wooden-signboard-5b0c88d0c8e722.2772929415275481128229.png);
+        background-size: cover;
+        background-position: center;
+        cursor: auto;
+        animation: none;
+    }
+    .commencer{
+        position: absolute;
+        top: 140px;
+        left: 7px;
+        font-size: 40px;
+        text-align: center;
+        color: #393E46;
+        font-weight: bold;
+        border: none;
+        font-family: tableau, Helvetica, sans-serif;
+        padding: 0;
+    }
+}
