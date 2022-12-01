@@ -55,7 +55,6 @@ body{
     font-size: 40px;
     text-align: center;
     color: #393E46;
-    font-weight: bold;
     border: none;
     font-family: tableau, Helvetica, sans-serif;
     padding: 0;
@@ -98,7 +97,7 @@ h1{
 }
 
 .bonne{
-   
+   padding: 5px;
     height: 150px;
     display: flex; 
     justify-content: center;
@@ -130,7 +129,9 @@ h1{
 .mauvaise span{
     margin: 5px 10px;
 }
-
+h4{
+    font-weight: 100;
+}
 input[type="submit"]{
     border: 1px solid #f0ebe1;
     padding: 0 20px;
@@ -227,6 +228,7 @@ button{
     align-items: center;
     display: none;
     cursor: auto;
+  
 }
 .figure-contenant{
     stroke: #f0ebe1;
@@ -268,11 +270,6 @@ button{
         top: -70px;
         right: -7%;
         transform: rotate(35deg);
-        height: 200px;
-        width: 250px;
-        background: url(./assets/image/kisspng-wood-clip-art-wooden-signboard-5b0c88d0c8e722.2772929415275481128229.png);
-        background-size: cover;
-        background-position: center;
         cursor: auto;
         animation: none;
     }
@@ -283,7 +280,6 @@ button{
         font-size: 40px;
         text-align: center;
         color: #393E46;
-        font-weight: bold;
         border: none;
         font-family: tableau, Helvetica, sans-serif;
         padding: 0;
