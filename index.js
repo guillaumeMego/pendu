@@ -153,6 +153,7 @@ valider.addEventListener('click', (e) => {
                 afficherNotif();
             }
         }
+        input.value = ""; // On remet la valeur de l'input a zero
     } else {
         // fenetre mot valide (div)
     }
